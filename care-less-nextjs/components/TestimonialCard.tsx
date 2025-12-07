@@ -17,7 +17,7 @@ export default function TestimonialCard({
   return (
     <article
       className={cn(
-        "relative overflow-hidden rounded-2xl p-8 min-h-[300px] flex flex-col justify-end",
+        "relative overflow-hidden rounded-2xl p-8 min-h-[300px] flex flex-col justify-end hover-scale",
         className
       )}
     >

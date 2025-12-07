@@ -96,17 +96,17 @@ export default function VideoHero({
       {/* Overlay */}
       <div className={cn("absolute inset-0", overlays[overlay])} />
 
-      {/* Content */}
+      {/* Content with deblur animation */}
       <div className="relative z-10 container-custom text-center text-white">
         {title && (
-          <h1 className="text-h1 text-shadow mb-4">{title}</h1>
+          <h1 className="text-h1 text-shadow mb-4 hero-deblur">{title}</h1>
         )}
         {subtitle && (
-          <p className="text-body-large text-shadow max-w-2xl mx-auto mb-8">
+          <p className="text-body-large text-shadow max-w-2xl mx-auto mb-8 hero-deblur-delay-1">
             {subtitle}
           </p>
         )}
-        {children}
+        <div className="hero-deblur-delay-2">{children}</div>
       </div>
     </section>
   );

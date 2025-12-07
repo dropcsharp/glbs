@@ -34,7 +34,7 @@ Med vänlig hälsning,
   return (
     <article
       className={cn(
-        "bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow",
+        "bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover-scale",
         className
       )}
     >
