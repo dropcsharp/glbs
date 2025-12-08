@@ -117,7 +117,6 @@ export default function HomePage() {
         videoSrc="/videos/home-ban.mp4"
         posterSrc="/images/home-hero.webp"
         height="large"
-        overlay="medium"
       >
         <h1 className="text-h1 text-shadow mb-6">Detoxa dina tankemönster</h1>
         <Button href="/#booking" variant="primary" size="lg">

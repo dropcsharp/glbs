@@ -16,7 +16,6 @@ export default function KontaktPage() {
         videoSrc="/videos/kontakt-ban.mp4"
         posterSrc="/images/kontakt-fallback.jpg"
         height="small"
-        overlay="medium"
       >
         <h1 className="text-h1 text-shadow">KONTAKT</h1>
       </VideoHero>

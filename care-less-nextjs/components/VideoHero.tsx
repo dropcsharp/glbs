@@ -11,7 +11,6 @@ interface VideoHeroProps {
   subtitle?: string;
   children?: React.ReactNode;
   height?: "full" | "large" | "medium" | "small";
-  overlay?: "light" | "medium" | "dark";
   fadeColor?: string;
   className?: string;
 }
@@ -23,7 +22,6 @@ export default function VideoHero({
   subtitle,
   children,
   height = "large",
-  overlay = "medium",
   fadeColor = "#FFFFFF",
   className,
 }: VideoHeroProps) {
@@ -44,12 +42,6 @@ export default function VideoHero({
     large: "min-h-[60vh]",
     medium: "min-h-[50vh]",
     small: "min-h-[40vh]",
-  };
-
-  const overlays = {
-    light: "bg-black/20",
-    medium: "bg-black/40",
-    dark: "bg-black/60",
   };
 
   const showVideo = videoSrc && !videoError;
@@ -98,9 +90,6 @@ export default function VideoHero({
           <source src={videoSrc} type="video/mp4" />
         </video>
       )}
-
-      {/* Overlay */}
-      <div className={cn("absolute inset-0", overlays[overlay])} />
 
       {/* Bottom fade transition to next section */}
       <div

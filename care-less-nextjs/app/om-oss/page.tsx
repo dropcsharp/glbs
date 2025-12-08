@@ -49,7 +49,6 @@ export default function OmOssPage() {
         videoSrc="/videos/omoss-ban.mp4"
         posterSrc="/images/omoss-fallback.jpg"
         height="medium"
-        overlay="medium"
       >
         <h1 className="text-h1 text-shadow">OM MIG</h1>
       </VideoHero>

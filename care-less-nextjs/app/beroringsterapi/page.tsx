@@ -51,7 +51,6 @@ export default function BeroringsterapiPage() {
         videoSrc="/videos/beroringsterapi-ban.mp4"
         posterSrc="/images/beroringsterapi-fallback.jpg"
         height="medium"
-        overlay="medium"
       >
         <h1 className="text-h1 text-shadow mb-4">Beröringsterapi</h1>
         <p className="text-body-large text-shadow max-w-2xl mx-auto mb-8">

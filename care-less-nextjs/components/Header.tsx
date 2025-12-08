@@ -17,6 +17,7 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [logoError, setLogoError] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,22 +41,26 @@ export default function Header() {
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <Image
-              src="/images/logo.webp"
-              alt="Care less"
-              width={50}
-              height={50}
-              className="w-12 h-12 object-contain"
-            />
-            <div className="flex flex-col">
-              <span className="text-2xl font-semibold tracking-tight">
-                <span style={{ color: "#DCE8FF" }}>Care</span>{" "}
-                <span className="text-black">less</span>
-              </span>
-              <span className="text-xs tracking-wide" style={{ color: "#666666" }}>
-                Detoxa dina tankemönster
-              </span>
-            </div>
+            {!logoError ? (
+              <Image
+                src="/images/logo.webp"
+                alt="Care less"
+                width={100}
+                height={100}
+                className="w-24 h-24 object-contain"
+                onError={() => setLogoError(true)}
+              />
+            ) : (
+              <div className="flex flex-col">
+                <span className="text-2xl font-semibold tracking-tight">
+                  <span style={{ color: "#DCE8FF" }}>Care</span>{" "}
+                  <span className="text-black">less</span>
+                </span>
+                <span className="text-xs tracking-wide" style={{ color: "#666666" }}>
+                  Detoxa dina tankemönster
+                </span>
+              </div>
+            )}
           </Link>
 
           {/* Desktop Navigation */}

@@ -182,33 +182,30 @@ body {
 }
 
 .btn-primary {
-  background-color: var(--black);
-  color: var(--white);
-}
-
-.btn-primary:hover {
-  background-color: #333;
+  background-color: var(--white);
+  color: var(--black);
+  border: 2px solid var(--black);
 }
 
 .btn-secondary {
   background-color: var(--white);
   color: var(--black);
-  border: 1px solid var(--black);
+  border: 2px solid var(--black);
 }
 
-.btn-secondary:hover {
-  background-color: var(--beige);
-}
-
-/* Hover scale effect - desktop only */
+/* Hover effects - desktop only */
 @media (min-width: 769px) {
-  .btn:hover {
-    transform: scale(1.08) !important;
+  .btn-primary:hover,
+  .btn-secondary:hover {
+    background-color: var(--black);
+    color: var(--white);
+    border-color: var(--white);
+    transform: scale(1.08);
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
   }
 
   .btn:active {
-    transform: scale(0.98) !important;
+    transform: scale(0.98);
   }
 }
 

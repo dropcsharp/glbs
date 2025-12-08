@@ -43,7 +43,6 @@ export default function ReikiPage() {
         videoSrc="/videos/reiki-ban.mp4"
         posterSrc="/images/reiki-fallback.jpg"
         height="medium"
-        overlay="medium"
       >
         <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 max-w-xl mx-auto">
           <h1 className="text-h2 text-black mb-4">Reikihealing</h1>

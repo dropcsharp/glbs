@@ -62,7 +62,6 @@ export default function HypnosterapiPage() {
         videoSrc="/videos/hypnosterapi-ban.mp4"
         posterSrc="/images/hypnosterapi-fallback.jpg"
         height="medium"
-        overlay="medium"
       >
         <h1 className="text-h1 text-shadow mb-4">Hypnosterapi</h1>
         <p className="text-body-large text-shadow max-w-2xl mx-auto mb-8">
