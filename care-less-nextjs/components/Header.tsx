@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const services = [
-  { label: "Hypnoterapi", href: "/hypnosterapi" },
+  { label: "Hypnosterapi", href: "/hypnosterapi" },
   { label: "Reiki", href: "/reiki" },
   { label: "Coachning", href: "/coachning" },
   { label: "Beröringsterapi", href: "/beroringsterapi" },
@@ -38,16 +39,23 @@ export default function Header() {
       <div className="container-custom">
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex flex-col">
-            <span className="text-2xl font-semibold tracking-tight">
-              <span className="text-coral" style={{ color: "#DCE8FF" }}>
-                Care
-              </span>{" "}
-              <span className="text-black">less</span>
-            </span>
-            <span className="text-xs text-dark-gray tracking-wide" style={{ color: "#666666" }}>
-              Detoxa dina tankemönster
-            </span>
+          <Link href="/" className="flex items-center gap-3">
+            <Image
+              src="/images/logo.webp"
+              alt="Care less"
+              width={50}
+              height={50}
+              className="w-12 h-12 object-contain"
+            />
+            <div className="flex flex-col">
+              <span className="text-2xl font-semibold tracking-tight">
+                <span style={{ color: "#DCE8FF" }}>Care</span>{" "}
+                <span className="text-black">less</span>
+              </span>
+              <span className="text-xs tracking-wide" style={{ color: "#666666" }}>
+                Detoxa dina tankemönster
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

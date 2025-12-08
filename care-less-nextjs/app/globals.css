@@ -177,6 +177,8 @@ body {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   text-decoration: none;
+  position: relative;
+  z-index: 1;
 }
 
 .btn-primary {
@@ -201,11 +203,12 @@ body {
 /* Hover scale effect - desktop only */
 @media (min-width: 769px) {
   .btn:hover {
-    transform: scale(1.05);
+    transform: scale(1.08) !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
   }
 
   .btn:active {
-    transform: scale(0.98);
+    transform: scale(0.98) !important;
   }
 }
 
@@ -291,11 +294,11 @@ body {
 
 /* ===== SCROLL ANIMATIONS ===== */
 
-/* Initial state - hidden below */
+/* Initial state - hidden below (3x stronger) */
 .animate-on-scroll {
   opacity: 0;
-  transform: translateY(40px) scale(0.95);
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(120px) scale(0.85);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Visible state - grown into place */
@@ -304,10 +307,10 @@ body {
   transform: translateY(0) scale(1);
 }
 
-/* Exit state - shrink upward */
+/* Exit state - shrink upward (3x stronger) */
 .animate-on-scroll.is-exiting {
   opacity: 0;
-  transform: translateY(-20px) scale(0.95);
+  transform: translateY(-60px) scale(0.85);
 }
 
 /* Staggered delays for grid items */

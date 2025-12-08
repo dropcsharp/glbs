@@ -34,12 +34,12 @@ Med vänlig hälsning,
   return (
     <article
       className={cn(
-        "bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover-scale",
+        "bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover-scale h-full flex flex-col",
         className
       )}
     >
       {/* Image */}
-      <div className="relative h-48 bg-[#EFEDEB]">
+      <div className="relative h-48 bg-[#EFEDEB] flex-shrink-0">
         {imageSrc ? (
           <Image
             src={imageSrc}
@@ -68,8 +68,8 @@ Med vänlig hälsning,
         )}
       </div>
 
-      {/* Content */}
-      <div className="p-6">
+      {/* Content - flex-grow to push button to bottom */}
+      <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-h6 mb-2">{title}</h3>
         <div className="flex items-center gap-2 text-[#666666] mb-4">
           <svg
@@ -90,9 +90,12 @@ Med vänlig hälsning,
 
         <p className="text-h5 font-semibold mb-4">{price}</p>
 
+        {/* Spacer to push button to bottom */}
+        <div className="flex-grow" />
+
         <Link
           href={mailtoLink}
-          className="btn btn-primary w-full text-center"
+          className="btn btn-primary w-full text-center mt-auto"
         >
           Gör en bokningsförfrågan
         </Link>

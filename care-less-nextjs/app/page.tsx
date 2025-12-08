@@ -8,28 +8,32 @@ import Image from "next/image";
 
 const services = [
   {
-    title: "Hypnoterapi",
+    title: "Hypnosterapi",
     description:
       "Genom hypnos kan vi nå ditt undermedvetna och bearbeta djupt rotade mönster och blockeringar.",
     href: "/hypnosterapi",
+    imageSrc: "/images/hypnosterapi.webp",
   },
   {
     title: "Coachning",
     description:
       "Personlig coachning som hjälper dig att nå dina mål och skapa positiva förändringar i ditt liv.",
     href: "/coachning",
+    imageSrc: "/images/coachning.webp",
   },
   {
     title: "Reikihealing",
     description:
       "En avslappnande healing som balanserar din energi och främjar kroppens naturliga läkningsförmåga.",
     href: "/reiki",
+    imageSrc: "/images/reiki.webp",
   },
   {
     title: "Beröringsterapi",
     description:
       "Terapeutisk beröring som ger djup avslappning och lindrar stress och spänningar.",
     href: "/beroringsterapi",
+    imageSrc: "/images/beroring.webp",
   },
 ];
 
@@ -140,6 +144,7 @@ export default function HomePage() {
                   title={service.title}
                   description={service.description}
                   href={service.href}
+                  imageSrc={service.imageSrc}
                 />
               </AnimateOnScroll>
             ))}

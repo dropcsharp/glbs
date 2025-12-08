@@ -12,17 +12,19 @@ interface VideoHeroProps {
   children?: React.ReactNode;
   height?: "full" | "large" | "medium" | "small";
   overlay?: "light" | "medium" | "dark";
+  fadeColor?: string;
   className?: string;
 }
 
 export default function VideoHero({
   videoSrc,
-  posterSrc = "/images/hero-fallback.jpg",
+  posterSrc,
   title,
   subtitle,
   children,
   height = "large",
   overlay = "medium",
+  fadeColor = "#FFFFFF",
   className,
 }: VideoHeroProps) {
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -50,6 +52,8 @@ export default function VideoHero({
     dark: "bg-black/60",
   };
 
+  const showVideo = videoSrc && !videoError;
+
   return (
     <section
       className={cn(
@@ -58,25 +62,8 @@ export default function VideoHero({
         className
       )}
     >
-      {/* Video or Fallback Image Background */}
-      {videoSrc && !videoError ? (
-        <video
-          ref={videoRef}
-          className={cn(
-            "absolute inset-0 w-full h-full object-cover transition-opacity duration-500",
-            videoLoaded ? "opacity-100" : "opacity-0"
-          )}
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster={posterSrc}
-          onLoadedData={() => setVideoLoaded(true)}
-          onError={() => setVideoError(true)}
-        >
-          <source src={videoSrc} type="video/mp4" />
-        </video>
-      ) : (
+      {/* Fallback Image Background - always render if posterSrc exists */}
+      {posterSrc && (
         <div className="absolute inset-0">
           <Image
             src={posterSrc}
@@ -88,13 +75,40 @@ export default function VideoHero({
         </div>
       )}
 
-      {/* Fallback background when no video/image */}
-      {!videoSrc && !posterSrc && (
+      {/* Fallback gradient when no image/video */}
+      {!posterSrc && !videoSrc && (
         <div className="absolute inset-0 bg-gradient-to-br from-[#DCE8FF] to-[#95B9FF]" />
+      )}
+
+      {/* Video - renders on top of fallback image */}
+      {showVideo && (
+        <video
+          ref={videoRef}
+          className={cn(
+            "absolute inset-0 w-full h-full object-cover transition-opacity duration-500",
+            videoLoaded ? "opacity-100" : "opacity-0"
+          )}
+          autoPlay
+          muted
+          loop
+          playsInline
+          onLoadedData={() => setVideoLoaded(true)}
+          onError={() => setVideoError(true)}
+        >
+          <source src={videoSrc} type="video/mp4" />
+        </video>
       )}
 
       {/* Overlay */}
       <div className={cn("absolute inset-0", overlays[overlay])} />
+
+      {/* Bottom fade transition to next section */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none"
+        style={{
+          background: `linear-gradient(to bottom, transparent, ${fadeColor})`,
+        }}
+      />
 
       {/* Content with deblur animation */}
       <div className="relative z-10 container-custom text-center text-white">
