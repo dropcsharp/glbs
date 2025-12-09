@@ -93,9 +93,9 @@ export default function VideoHero({
 
       {/* Bottom fade transition to next section */}
       <div
-        className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none"
+        className="absolute bottom-0 left-0 right-0 h-48 pointer-events-none"
         style={{
-          background: `linear-gradient(to bottom, transparent, ${fadeColor})`,
+          background: `linear-gradient(to bottom, transparent 0%, ${fadeColor}20 30%, ${fadeColor}80 70%, ${fadeColor} 100%)`,
         }}
       />
 
