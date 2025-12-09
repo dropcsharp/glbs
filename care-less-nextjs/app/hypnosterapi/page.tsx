@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import VideoHero from "@/components/VideoHero";
 import Button from "@/components/Button";
 
@@ -80,10 +81,13 @@ export default function HypnosterapiPage() {
               <div className="flex flex-col md:flex-row gap-8 items-center">
                 {/* Avatar */}
                 <div className="flex-shrink-0">
-                  <div className="w-24 h-24 rounded-full bg-[#D4D2CF] flex items-center justify-center">
-                    <svg className="w-12 h-12 text-[#666666] opacity-50" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                    </svg>
+                  <div className="w-24 h-24 rounded-full bg-[#D4D2CF] overflow-hidden relative">
+                    <Image
+                      src="/images/pontus-testimonial.webp"
+                      alt="Pontus"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                 </div>
 
@@ -157,16 +161,22 @@ export default function HypnosterapiPage() {
 
       {/* Bottom CTA Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#95B9FF] to-[#DCE8FF]">
-          <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hypnosterapi-cta-bg.webp"
+            alt=""
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
 
         <div className="relative z-10 container-custom">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <blockquote className="text-body-large text-shadow mb-6">
-              &ldquo;Jag har gått i samtalsterapi av och till under 17 års tid, utan effekt. En session med Maria förändrade mitt liv för alltid, och jag är evigt tacksam.&rdquo;
-            </blockquote>
-            <cite className="not-italic font-semibold text-body text-shadow block mb-8">— Pontus L.</cite>
+            <h2 className="text-h2 text-shadow mb-4">Redo att ta itu med det som håller dig tillbaka?</h2>
+            <p className="text-body-large text-shadow mb-8 max-w-2xl mx-auto">
+              Hypnosterapi kan hjälpa dig att bearbeta trauman, bryta negativa mönster och skapa varaktig förändring. Ta första steget idag.
+            </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/kontakt" variant="secondary">

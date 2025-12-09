@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import VideoHero from "@/components/VideoHero";
 import Button from "@/components/Button";
 
@@ -200,23 +201,13 @@ export default function BeroringsterapiPage() {
       <section className="section-spacing bg-[#EFEDEB]">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="bg-[#D4D2CF] rounded-2xl aspect-video flex items-center justify-center">
-              <div className="text-center text-[#666666]">
-                <svg
-                  className="w-16 h-16 mx-auto mb-4 opacity-40"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
-                </svg>
-                <p className="text-sm">Bild placeholder</p>
-              </div>
+            <div className="relative rounded-2xl aspect-video overflow-hidden">
+              <Image
+                src="/images/beroringsterapi-cta.webp"
+                alt="Beröringsterapi"
+                fill
+                className="object-cover"
+              />
             </div>
             <div>
               <h2 className="text-h3 mb-4">Låter det som något för dig?</h2>

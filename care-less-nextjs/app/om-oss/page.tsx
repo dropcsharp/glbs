@@ -91,7 +91,7 @@ export default function OmOssPage() {
             {/* Content Column */}
             <div className="lg:col-span-8">
               <h2 className="text-h3 mb-8">
-                Vårt förhållningssätt är att alla har svaren inuti sig själva.
+                Mitt förhållningssätt är att alla har svaren inuti sig själva.
               </h2>
 
               <div className="prose prose-lg max-w-none text-[#666666]">

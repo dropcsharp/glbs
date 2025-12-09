@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import VideoHero from "@/components/VideoHero";
 import Button from "@/components/Button";
 
@@ -232,8 +233,14 @@ export default function ReikiPage() {
 
       {/* Final CTA Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#95B9FF] to-[#DCE8FF]">
-          <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0">
+          <Image
+            src="/images/reiki-cta-bg.webp"
+            alt=""
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
 
         <div className="relative z-10 container-custom text-center text-white">

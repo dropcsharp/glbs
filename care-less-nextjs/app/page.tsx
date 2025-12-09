@@ -129,7 +129,7 @@ export default function HomePage() {
         <div className="container-custom">
           <AnimateOnScroll>
             <div className="text-center mb-16">
-              <h2 className="text-h2 mb-4">Våra tjänster</h2>
+              <h2 className="text-h2 mb-4">Mina tjänster</h2>
               <p className="text-body-large text-[#666666] max-w-2xl mx-auto">
                 Du förtjänar att må bättre
               </p>
@@ -173,9 +173,9 @@ export default function HomePage() {
             {/* Content */}
             <AnimateOnScroll delay={2}>
               <div>
-                <h2 className="text-h2 mb-6">Om oss</h2>
+                <h2 className="text-h2 mb-6">Om Maria</h2>
                 <p className="text-body-large text-[#666666] mb-6">
-                  Vårt förhållningssätt är att alla har svaren inuti sig själva.
+                  Mitt förhållningssätt är att alla har svaren inuti sig själva.
                   Genom mina behandlingar hjälper jag dig att hitta din inre kraft
                   och skapa positiva förändringar i ditt liv.
                 </p>

@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const contactSchema = z.object({
   firstName: z.string().min(1, "Förnamn är obligatoriskt"),
@@ -15,10 +18,6 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     const data = contactSchema.parse(body);
-
-    // For now, we'll log the data and simulate sending an email
-    // In production, integrate with Resend, Nodemailer, or another email service
-    console.log("Contact form submission:", data);
 
     // Create email content
     const emailContent = `
@@ -36,40 +35,22 @@ Meddelande:
 ${data.message || "Inget meddelande"}
     `.trim();
 
-    // Log the email content for development
-    console.log("Email content:", emailContent);
+    // Send email using Resend
+    const { error } = await resend.emails.send({
+      from: "Care-less.se <onboarding@resend.dev>",
+      to: "mariavlarsson@gmail.com",
+      replyTo: data.email,
+      subject: `Ny kontaktförfrågan från ${data.firstName}${data.lastName ? ` ${data.lastName}` : ""}`,
+      text: emailContent,
+    });
 
-    // Simulate email sending delay
-    await new Promise((resolve) => setTimeout(resolve, 500));
-
-    // In production, you would send the email here using Resend or Nodemailer:
-    //
-    // Using Resend:
-    // import { Resend } from 'resend';
-    // const resend = new Resend(process.env.RESEND_API_KEY);
-    // await resend.emails.send({
-    //   from: 'noreply@care-less.se',
-    //   to: 'kontakt@care-less.se',
-    //   subject: `Ny kontaktförfrågan från ${data.firstName}`,
-    //   text: emailContent,
-    // });
-    //
-    // Using Nodemailer:
-    // import nodemailer from 'nodemailer';
-    // const transporter = nodemailer.createTransport({
-    //   host: process.env.SMTP_HOST,
-    //   port: parseInt(process.env.SMTP_PORT || '587'),
-    //   auth: {
-    //     user: process.env.SMTP_USER,
-    //     pass: process.env.SMTP_PASS,
-    //   },
-    // });
-    // await transporter.sendMail({
-    //   from: 'noreply@care-less.se',
-    //   to: 'kontakt@care-less.se',
-    //   subject: `Ny kontaktförfrågan från ${data.firstName}`,
-    //   text: emailContent,
-    // });
+    if (error) {
+      console.error("Resend error:", error);
+      return NextResponse.json(
+        { success: false, message: "Kunde inte skicka meddelandet" },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json(
       { success: true, message: "Meddelandet har skickats" },
