@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Instagram, Facebook, Linkedin } from "lucide-react";
+import { Instagram, Facebook } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -29,7 +29,7 @@ export default function Footer() {
             {/* Social Links */}
             <div className="flex gap-4 mt-6">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/careless.detoxatankemonster/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -38,22 +38,13 @@ export default function Footer() {
                 <Instagram className="w-6 h-6" />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=61566114849831"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
                 className="hover:opacity-80 transition-opacity"
               >
                 <Facebook className="w-6 h-6" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="hover:opacity-80 transition-opacity"
-              >
-                <Linkedin className="w-6 h-6" />
               </a>
             </div>
           </div>

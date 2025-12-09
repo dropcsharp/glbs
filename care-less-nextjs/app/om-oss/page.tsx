@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import VideoHero from "@/components/VideoHero";
 import Button from "@/components/Button";
-import { Linkedin } from "lucide-react";
+import { Instagram, Facebook } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Om oss",
@@ -31,14 +31,12 @@ const certifications = [
   "Certifierad Hyposyntesterapeut",
   "Certifierad Reikihealer Nivå 2",
   "Certifierad Beröringsterapeut",
-  "[Ytterligare certifikat att lägga till]",
 ];
 
 const qualifications = [
   "Utbildning i kognitiv beteendeterapi",
   "Grundkurs i motiverande samtal",
   "Traumamedveten omsorg",
-  "[Ytterligare kvalifikationer att lägga till]",
 ];
 
 export default function OmOssPage() {
@@ -75,16 +73,27 @@ export default function OmOssPage() {
                   </div>
                 </div>
 
-                {/* Social Link */}
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[#2969FF] hover:underline"
-                >
-                  <Linkedin className="w-5 h-5" />
-                  <span>LinkedIn</span>
-                </a>
+                {/* Social Links */}
+                <div className="flex items-center gap-4">
+                  <a
+                    href="https://www.instagram.com/careless.detoxatankemonster/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-[#2969FF] hover:underline"
+                  >
+                    <Instagram className="w-5 h-5" />
+                    <span>Instagram</span>
+                  </a>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61566114849831"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-[#2969FF] hover:underline"
+                  >
+                    <Facebook className="w-5 h-5" />
+                    <span>Facebook</span>
+                  </a>
+                </div>
               </div>
             </div>
 
