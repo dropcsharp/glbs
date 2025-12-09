@@ -5,7 +5,8 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Kontakt",
   description:
-    "Kontakta Care less för att boka en tid eller ställa frågor. Vi finns i Göteborg och erbjuder även sessioner online.",
+    "Välj själv hur du vill ta kontakt med oss på Care-Less! Via telefon, email eller onlinemöte - du väljer.",
+  keywords: ["kontakt", "maria larsson", "care less"],
 };
 
 export default function KontaktPage() {

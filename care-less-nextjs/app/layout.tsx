@@ -6,20 +6,23 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   metadataBase: new URL("https://care-less.se"),
   title: {
-    default: "Care less | Detoxa dina tankemönster",
+    default: "Care less | Coachning, Hypnoterapi, Reiki och Beröringsterapi i Göteborg | Terapier Online",
     template: "%s | Care less",
   },
   description:
-    "Care less erbjuder hypnosterapi, coachning, reikihealing och beröringsterapi i Göteborg. Boka ditt gratis introduktionsmöte idag.",
+    "Care Less - Detoxa dina tankemönster. Vi erbjuder reiki-healing, beröringsterapi, coachning & hyposyntesterapi/hypnoterapi: både online och på plats i Göteborg. Kontakta oss för ett kostnadsfritt introduktionsmöte!",
   keywords: [
+    "care less",
+    "terapier online",
+    "göteborg",
     "hypnosterapi",
-    "hypnos",
+    "hypnoterapi",
     "coachning",
     "reiki",
     "reikihealing",
     "beröringsterapi",
+    "hyposyntesterapi",
     "terapi",
-    "Göteborg",
     "avslappning",
     "personlig utveckling",
   ],
@@ -30,9 +33,9 @@ export const metadata: Metadata = {
     locale: "sv_SE",
     url: "https://care-less.se",
     siteName: "Care less",
-    title: "Care less | Detoxa dina tankemönster",
+    title: "Care less | Coachning, Hypnoterapi, Reiki och Beröringsterapi i Göteborg",
     description:
-      "Care less erbjuder hypnosterapi, coachning, reikihealing och beröringsterapi i Göteborg.",
+      "Care Less - Detoxa dina tankemönster. Vi erbjuder reiki-healing, beröringsterapi, coachning & hyposyntesterapi: både online och på plats i Göteborg.",
     images: [
       {
         url: "/images/og-image.jpg",
@@ -44,9 +47,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Care less | Detoxa dina tankemönster",
+    title: "Care less | Coachning, Hypnoterapi, Reiki och Beröringsterapi i Göteborg",
     description:
-      "Care less erbjuder hypnosterapi, coachning, reikihealing och beröringsterapi i Göteborg.",
+      "Care Less - Detoxa dina tankemönster. Vi erbjuder reiki-healing, beröringsterapi, coachning & hyposyntesterapi: både online och på plats i Göteborg.",
     images: ["/images/og-image.jpg"],
   },
   robots: {

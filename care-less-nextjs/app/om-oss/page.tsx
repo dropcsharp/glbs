@@ -4,9 +4,10 @@ import Button from "@/components/Button";
 import { Instagram, Facebook } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Om oss",
+  title: "Om Maria",
   description:
-    "Lär känna Maria Larsson - hyposyntesterapeut, reikihealer och beröringsterapeut i Göteborg. Vårt förhållningssätt är att alla har svaren inuti sig själva.",
+    "Lär känna Maria Larsson - hyposyntesterapeut, reikihealer och beröringsterapeut i Göteborg. Mitt förhållningssätt är att alla har svaren inuti sig själva.",
+  keywords: ["Maria Larsson", "hyposyntesterapeut", "reikihealer", "beröringsterapeut", "Göteborg"],
 };
 
 const expertiseAreas = [

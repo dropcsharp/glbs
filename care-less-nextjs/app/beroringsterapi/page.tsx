@@ -4,9 +4,10 @@ import VideoHero from "@/components/VideoHero";
 import Button from "@/components/Button";
 
 export const metadata: Metadata = {
-  title: "Beröringsterapi",
+  title: "Beröringsterapi i Göteborg",
   description:
-    "Beröringsterapi ger djup avslappning och hjälper kroppen att läka sig själv. Terapeutisk beröring för stressreduktion och emotionell balans.",
+    "Erfar beröringens läkande kraft. Vår varsamma beröringsterapi lindrar spänningar, främjar naturlig läkning och skapar djup avslappning och inre harmoni. Boka nu.",
+  keywords: ["beröringsterapi göteborg", "beröringsterapi", "terapeutisk beröring"],
 };
 
 const howItWorks = [

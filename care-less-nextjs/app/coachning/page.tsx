@@ -3,9 +3,10 @@ import VideoHero from "@/components/VideoHero";
 import Button from "@/components/Button";
 
 export const metadata: Metadata = {
-  title: "Coachning",
+  title: "Coachning med eller utan hypnos",
   description:
-    "Personlig coachning som hjälper dig att nå dina mål och skapa positiva förändringar i ditt liv. Individuell coachning och hypnocoaching i Göteborg.",
+    "Transformerande coaching för personlig utveckling och måluppfyllelse. Kombinerar traditionell coaching med hyposyntesterapi för djupgående och varaktiga resultat. Boka nu.",
+  keywords: ["coaching online", "coachning", "hypnocoaching", "personlig utveckling", "Göteborg"],
 };
 
 const hypnoCoachingBenefits = [

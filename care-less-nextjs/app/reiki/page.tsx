@@ -4,9 +4,10 @@ import VideoHero from "@/components/VideoHero";
 import Button from "@/components/Button";
 
 export const metadata: Metadata = {
-  title: "Reiki",
+  title: "Reikihealing i Göteborg",
   description:
-    "Reikihealing balanserar din energi och främjar kroppens naturliga läkningsförmåga. Upplev djup avslappning och ökat välmående.",
+    "Balansera kropp och själ med professionell Reikihealing. Upplev djup avslappning, stressreducering och förbättrat välbefinnande genom universell energi. Boka din session idag.",
+  keywords: ["reiki", "reikihealing", "energihealing", "Göteborg"],
 };
 
 const duringSessionPoints = [

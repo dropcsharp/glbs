@@ -4,9 +4,10 @@ import VideoHero from "@/components/VideoHero";
 import Button from "@/components/Button";
 
 export const metadata: Metadata = {
-  title: "Hypnosterapi",
+  title: "Hypnosterapi | Online och i Göteborg",
   description:
-    "Hypnosterapi hjälper dig att nå ditt undermedvetna och skapa varaktiga förändringar. Effektiv behandling för ångest, depression, fobier och mycket mer.",
+    "Upptäck hypnoterapins transformerande kraft. Bearbeta trauman, övervinn mentala hinder och skapa positiva förändringar genom djup avslappning. Boka session i Göteborg eller online.",
+  keywords: ["hypnosterapi online", "hypnosterapi göteborg", "hypnoterapi", "hyposyntesterapi"],
 };
 
 const benefits = [
